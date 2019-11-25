@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Search</title>
+    <style type="text/css">
+        .abc {
+            border-radius: 10px;
+            border-style: solid;
+        }
+
+        .wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .links {
+            margin: auto;
+        }
+        #poisk{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div><img id="map" width="600" height="200" src="search.png"></div>
+        <div><input style="text-align: center; outline: none; line-height: 20px" type="search" id="gg" class="abc"
+                size="80%" maxlength="100" tabindex="2" placeholder="Введите что бы вы хотели найти"></div>
+        <button id="poisk" onclick="Search()"><img id="map" width="50" height="50" src="g.png"></button>
+        <table class="links" cellspacing="30">
+            <tr>
+                <td><a href="https://youtube.com"><img id="map" width="60" height="60" src="youtube.png"></a></td>
+                <td><a href="https://telegram.org/"><img id="map" width="60" height="60" src="telegram.jpg"></a></td>
+                <td><a href="https://mail.google.com"><img id="map" width="60" height="60" src="gmail.png"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://ru.wikipedia.org/wiki/"><img id="map" width="60" height="60"
+                            src="wikipedia.jpg"></a></td>
+                <td><a href="https://gdz.ru/"><img id="map" width="60" height="60" src="gdz.png"></a></td>
+                <td><a href="https://www.viber.com/ru/"><img id="map" width="60" height="60" src="viber.png"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.google.com.ua/"><img id="map" width="60" height="60" src="google.jpg"></a></td>
+                <td><a href="https://learn.javascript.ru/"><img id="map" width="60" height="60" src="js.jpg"></a></td>
+                <td><a href="http://blockchain.info/"><img id="map" width="60" height="60" src="bitcoin.png"></a></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var poisk = document.getElementById("poisk");
+        function Search() {
+
+            document.location.href = "https://www.google.com/search?q=" + gg.value;
+        }
+    </script>
+
+</body>
+
+</html>
